@@ -3,7 +3,29 @@
           package="me.silhouette"
           android:versionCode="1"
           android:versionName="1.0">
-    <uses-sdk android:minSdkVersion="17"/>
+    <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="17"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.NFC" />
+
+    <!-- Import phonebook reated-->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <!-- Phonebook permission related -->
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+
+    <!-- Reading/Writing from/to external Storage -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
         <activity android:name="Doodle"
                   android:label="@string/app_name">
