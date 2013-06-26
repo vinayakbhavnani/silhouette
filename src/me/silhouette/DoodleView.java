@@ -27,6 +27,7 @@ public class DoodleView extends View
         paint.setColor(Color.BLUE);
         paint.setStrokeWidth(5);
         paint.setStyle(Paint.Style.STROKE);
+        paint.setFlags(Paint.ANTI_ALIAS_FLAG);
     }
 
     public DoodleView(Context context, AttributeSet attrs)
