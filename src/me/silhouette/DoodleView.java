@@ -26,6 +26,7 @@ public class DoodleView extends View
         paint = new Paint();
         paint.setColor(Color.BLUE);
         paint.setStrokeWidth(5);
+        paint.setStyle(Paint.Style.STROKE);
     }
 
     public DoodleView(Context context, AttributeSet attrs)
