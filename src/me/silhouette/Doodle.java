@@ -5,13 +5,10 @@ import android.os.Bundle;
 
 public class Doodle extends Activity
 {
-    /**
-     * Called when the activity is first created.
-     */
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(new DoodleView(this));
     }
 }
