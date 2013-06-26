@@ -28,6 +28,7 @@ public class TouchEventTranslator implements View.OnTouchListener
         else if(action == MotionEvent.ACTION_MOVE)
         {
             Log.d("doodle","action move"+action);
+            updateHistoricalPath(motionEvent,mPath);
             mPath.lineTo(motionEvent.getX(),motionEvent.getY());
         }
         else
@@ -36,5 +37,13 @@ public class TouchEventTranslator implements View.OnTouchListener
         }
         view.invalidate();
         return true;
+    }
+
+    private void updateHistoricalPath(MotionEvent event , Path path)
+    {
+        for(int i=0;i<event.getHistorySize();i++)
+        {
+            path.lineTo(event.getHistoricalX(i),event.getHistoricalY(i));
+        }
     }
 }
